@@ -9,7 +9,7 @@ export class Person {
     protected officeAreaCode: string,
     protected officeNumber: string
   ) {
-    this.phoneNumber = new TelephoneNumber(officeAreaCode);
+    this.phoneNumber = new TelephoneNumber(officeAreaCode, officeNumber);
   }
 
   setName(name: string): void {
@@ -29,18 +29,18 @@ export class Person {
   }
 
   setOfficeAreaCode(officeAreaCode: string): void {
-    return this.phoneNumber.setOfficeAreaCode(officeAreaCode);
+    return this.phoneNumber.setAreaCode(officeAreaCode);
   }
 
   getOfficeAreaCode(): string {
-    return this.phoneNumber.getOfficeAreaCode();
+    return this.phoneNumber.getAreaCode();
   }
 
   setOfficeNumber(officeNumber: string): void {
-    this.officeNumber = officeNumber;
+    return this.phoneNumber.setNumber(officeNumber);
   }
 
   getOfficeNumber(): string {
-    return this.officeNumber;
+    return this.phoneNumber.getNumber();
   }
 }

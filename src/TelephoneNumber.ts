@@ -1,11 +1,19 @@
 export class TelephoneNumber {
-  constructor(protected officeAreaCode: string) {}
+  constructor(protected areaCode: string, protected number: string) {}
 
-  setOfficeAreaCode(officeAreaCode: string): void {
-    this.officeAreaCode = officeAreaCode;
+  setAreaCode(areaCode: string): void {
+    this.areaCode = areaCode;
   }
 
-  getOfficeAreaCode(): string {
-    return this.officeAreaCode;
+  getAreaCode(): string {
+    return this.areaCode;
+  }
+
+  setNumber(number: string): void {
+    this.number = number;
+  }
+
+  getNumber(): string {
+    return this.number;
   }
 }
