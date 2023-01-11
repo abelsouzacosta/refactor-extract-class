@@ -29,11 +29,11 @@ export class Person {
   }
 
   setOfficeAreaCode(officeAreaCode: string): void {
-    this.officeAreaCode = officeAreaCode;
+    return this.phoneNumber.setOfficeAreaCode(officeAreaCode);
   }
 
   getOfficeAreaCode(): string {
-    return this.officeAreaCode;
+    return this.phoneNumber.getOfficeAreaCode();
   }
 
   setOfficeNumber(officeNumber: string): void {
