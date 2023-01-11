@@ -1,10 +1,16 @@
+import { TelephoneNumber } from "./TelephoneNumber";
+
 export class Person {
+  protected phoneNumber: TelephoneNumber;
+
   constructor(
     protected name: string,
     protected telephoneNumber: string,
     protected officeAreaCode: string,
     protected officeNumber: string
-  ) {}
+  ) {
+    this.phoneNumber = new TelephoneNumber();
+  }
 
   setName(name: string): void {
     this.name = name;
