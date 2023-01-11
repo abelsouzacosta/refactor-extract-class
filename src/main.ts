@@ -9,7 +9,7 @@ export class Person {
     protected officeAreaCode: string,
     protected officeNumber: string
   ) {
-    this.phoneNumber = new TelephoneNumber();
+    this.phoneNumber = new TelephoneNumber(officeAreaCode);
   }
 
   setName(name: string): void {
